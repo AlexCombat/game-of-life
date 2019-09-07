@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.9.1)
+project(game_of_life)
+set(CMAKE_CXX_COMPILER icl)
+file(GLOB SOURCES ./*.cpp ./*.hpp)
+add_executable(game_of_life main.cpp ${SOURCES})
+set_target_properties(game_of_life PROPERTIES CXX_STANDARD 17)
+#target_link_libraries(game_of_life ${VTUNE_AMPLIFIER_PATH}/lib64/libittnotify.lib)
+#target_include_directories(game_of_life PRIVATE ${VTUNE_AMPLIFIER_PATH}/include)
