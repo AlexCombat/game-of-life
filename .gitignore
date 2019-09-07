@@ -43,7 +43,11 @@
 # CMake
 CMakeFiles/*
 *.cmake
+<<<<<<< HEAD
 !CMakeLists.txt
 
 # Build
 build/*
+=======
+!CMakeLists.txt
+>>>>>>> e53425d54c856255fd5738da45ff782b793fb68b
