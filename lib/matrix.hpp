@@ -4,6 +4,7 @@
 
 namespace gol
 {
+    // This is container representing two-dimensional array
     template<class T>
     class Matrix
     {

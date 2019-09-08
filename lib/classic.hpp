@@ -5,6 +5,7 @@
 
 namespace gol
 {
+    // Classic implementation of the game algorithms
     namespace classic
     {
         enum class Status: bool

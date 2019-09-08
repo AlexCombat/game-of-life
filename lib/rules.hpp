@@ -6,6 +6,8 @@
 
 namespace gol
 {
+    // Rule strategy calculates the new state of the cell based on the cells surrounding it.
+    // The actual rules are determined by implementations
     template<class CellStatus>
     class IRuleStrategy
     {

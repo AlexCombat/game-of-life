@@ -7,6 +7,8 @@
 
 namespace gol
 {
+    // Class, representing a game universe. Receives rule strategy and the initial state of the game.
+    // On iteration, calculates new states of each cell by calling rule strategy and form the new state of the game
     template<class CellStatus>
     class Universe
     {
@@ -19,6 +21,8 @@ namespace gol
         void iterate(std::size_t steps);
 
     private:
+        // Wrapper interface over the Matrix that allow to access elements
+        // with indices relative to the passed offsets.
         class CellAccessor : public ICellAccessor<CellStatus>
         {
         public:
@@ -93,6 +97,8 @@ namespace gol
     template<class CellStatus>
     CellStatus Universe<CellStatus>::CellAccessor::getNeighborStatus(size_t horizontalOffset, size_t verticalOffset) const
     {
+        // Indices are calculated as division remainder
+        // to treat the matrix as a closed space
         return m_universe.m_currentState.get(
             (m_x + horizontalOffset) % m_universe.m_width,
             (m_y + verticalOffset) % m_universe.m_height);
